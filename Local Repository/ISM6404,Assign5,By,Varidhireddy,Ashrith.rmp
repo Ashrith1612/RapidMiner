@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.10.001" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Users\ashri\OneDrive\Documents\ISM6404,DataOnHappinessForAssign5.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Overall rank.true.integer.attribute"/>
+          <parameter key="1" value="Country or region.true.polynominal.attribute"/>
+          <parameter key="2" value="Score.true.real.attribute"/>
+          <parameter key="3" value="GDP per capita.true.real.attribute"/>
+          <parameter key="4" value="Social support.true.real.attribute"/>
+          <parameter key="5" value="Healthy life expectancy.true.real.attribute"/>
+          <parameter key="6" value="Freedom to make life choices.true.real.attribute"/>
+          <parameter key="7" value="Generosity.true.real.attribute"/>
+          <parameter key="8" value="Perceptions of corruption.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel" width="90" x="45" y="136">
+        <parameter key="excel_file" value="C:\Users\ashri\OneDrive\Documents\ISM6404,DataOnCovid19ForAssign5-1.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Date.true.date.attribute"/>
+          <parameter key="1" value="Afghanistan.true.integer.attribute"/>
+          <parameter key="2" value="Argentina.true.integer.attribute"/>
+          <parameter key="3" value="Armenia.true.integer.attribute"/>
+          <parameter key="4" value="Australia.true.integer.attribute"/>
+          <parameter key="5" value="Austria.true.integer.attribute"/>
+          <parameter key="6" value="Bangladesh.true.integer.attribute"/>
+          <parameter key="7" value="Belgium.true.integer.attribute"/>
+          <parameter key="8" value="Belize.true.integer.attribute"/>
+          <parameter key="9" value="Bolivia.true.integer.attribute"/>
+          <parameter key="10" value="Brazil.true.integer.attribute"/>
+          <parameter key="11" value="Bulgaria.true.integer.attribute"/>
+          <parameter key="12" value="Canada.true.integer.attribute"/>
+          <parameter key="13" value="Chile.true.integer.attribute"/>
+          <parameter key="14" value="Colombia.true.integer.attribute"/>
+          <parameter key="15" value="Cyprus.true.integer.attribute"/>
+          <parameter key="16" value="Czech Republic.true.integer.attribute"/>
+          <parameter key="17" value="Ecuador.true.integer.attribute"/>
+          <parameter key="18" value="Ethiopia.true.integer.attribute"/>
+          <parameter key="19" value="Finland.true.integer.attribute"/>
+          <parameter key="20" value="France.true.integer.attribute"/>
+          <parameter key="21" value="Germany.true.integer.attribute"/>
+          <parameter key="22" value="Greece.true.integer.attribute"/>
+          <parameter key="23" value="Hungary.true.integer.attribute"/>
+          <parameter key="24" value="India.true.integer.attribute"/>
+          <parameter key="25" value="Indonesia.true.integer.attribute"/>
+          <parameter key="26" value="Iran.true.integer.attribute"/>
+          <parameter key="27" value="Iraq.true.integer.attribute"/>
+          <parameter key="28" value="Ireland.true.integer.attribute"/>
+          <parameter key="29" value="Israel.true.integer.attribute"/>
+          <parameter key="30" value="Italy.true.integer.attribute"/>
+          <parameter key="31" value="Japan.true.integer.attribute"/>
+          <parameter key="32" value="Korea, South.true.integer.attribute"/>
+          <parameter key="33" value="Kuwait.true.integer.attribute"/>
+          <parameter key="34" value="Malaysia.true.integer.attribute"/>
+          <parameter key="35" value="Mexico.true.integer.attribute"/>
+          <parameter key="36" value="Mongolia.true.integer.attribute"/>
+          <parameter key="37" value="Myanmar.true.integer.attribute"/>
+          <parameter key="38" value="Norway.true.integer.attribute"/>
+          <parameter key="39" value="Pakistan.true.integer.attribute"/>
+          <parameter key="40" value="Paraguay.true.integer.attribute"/>
+          <parameter key="41" value="Peru.true.integer.attribute"/>
+          <parameter key="42" value="Philippines.true.integer.attribute"/>
+          <parameter key="43" value="Poland.true.integer.attribute"/>
+          <parameter key="44" value="Russia.true.integer.attribute"/>
+          <parameter key="45" value="Saudi Arabia.true.integer.attribute"/>
+          <parameter key="46" value="Serbia.true.integer.attribute"/>
+          <parameter key="47" value="Singapore.true.integer.attribute"/>
+          <parameter key="48" value="South Africa.true.integer.attribute"/>
+          <parameter key="49" value="Spain.true.integer.attribute"/>
+          <parameter key="50" value="Sri Lanka.true.integer.attribute"/>
+          <parameter key="51" value="Sweden.true.integer.attribute"/>
+          <parameter key="52" value="Switzerland.true.integer.attribute"/>
+          <parameter key="53" value="Thailand.true.integer.attribute"/>
+          <parameter key="54" value="Turkey.true.integer.attribute"/>
+          <parameter key="55" value="USA.true.integer.attribute"/>
+          <parameter key="56" value="United Kingdom.true.integer.attribute"/>
+          <parameter key="57" value="Uruguay.true.integer.attribute"/>
+          <parameter key="58" value="Venezuela.true.integer.attribute"/>
+          <parameter key="59" value="Vietnam.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_port="result 1"/>
+      <connect from_op="Read Excel" from_port="output" to_port="result 2"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+    </process>
+  </operator>
+</process>

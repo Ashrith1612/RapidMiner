@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.006">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.006" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_excel" compatibility="9.10.006" expanded="true" height="68" name="Read Excel" width="90" x="45" y="34">
+        <parameter key="excel_file" value="C:\Users\ashri\OneDrive\Documents\LivestockMeat_Monthly rapidminer.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="B1:O10485776"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Country.true.polynominal.attribute"/>
+          <parameter key="1" value="Dec-20.true.real.attribute"/>
+          <parameter key="2" value="Jan-21.true.real.attribute"/>
+          <parameter key="3" value="Feb-21.true.real.attribute"/>
+          <parameter key="4" value="Mar-21.true.real.attribute"/>
+          <parameter key="5" value="Apr-21.true.real.attribute"/>
+          <parameter key="6" value="May-21.true.real.attribute"/>
+          <parameter key="7" value="Jun-21.true.real.attribute"/>
+          <parameter key="8" value="Jul-21.true.real.attribute"/>
+          <parameter key="9" value="Aug-21.true.real.attribute"/>
+          <parameter key="10" value="Sep-21.true.real.attribute"/>
+          <parameter key="11" value="Oct-21.true.real.attribute"/>
+          <parameter key="12" value="Nov-21.true.real.attribute"/>
+          <parameter key="13" value="Dec-21.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Spline graph of pork exports" width="90" x="179" y="289">
+        <parameter key="repository_entry" value="../Spline graph of pork exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Scatter chart of lamb exports" width="90" x="179" y="85">
+        <parameter key="repository_entry" value="../Scatter chart of lamb exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Pyramid of pork exports" width="90" x="45" y="136">
+        <parameter key="repository_entry" value="../Pyramid of pork exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Line chart of lamb exports" width="90" x="179" y="187">
+        <parameter key="repository_entry" value="../Line chart of lamb exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Donut chart of pork exports" width="90" x="313" y="238">
+        <parameter key="repository_entry" value="../Donut chart of pork exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve bubble chart of lamb exports" width="90" x="514" y="238">
+        <parameter key="repository_entry" value="../bubble chart of lamb exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Bar chart of lamb exports" width="90" x="313" y="136">
+        <parameter key="repository_entry" value="../Bar chart of lamb exports"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.006" expanded="true" height="68" name="Retrieve Funnel chart of pork exports" width="90" x="447" y="340">
+        <parameter key="repository_entry" value="../Funnel chart of pork exports"/>
+      </operator>
+      <connect from_port="input 1" to_op="Read Excel" to_port="file"/>
+      <connect from_op="Read Excel" from_port="output" to_port="result 1"/>
+      <connect from_op="Retrieve Spline graph of pork exports" from_port="output" to_port="result 8"/>
+      <connect from_op="Retrieve Scatter chart of lamb exports" from_port="output" to_port="result 2"/>
+      <connect from_op="Retrieve Pyramid of pork exports" from_port="output" to_port="result 7"/>
+      <connect from_op="Retrieve Line chart of lamb exports" from_port="output" to_port="result 6"/>
+      <connect from_op="Retrieve Donut chart of pork exports" from_port="output" to_port="result 5"/>
+      <connect from_op="Retrieve bubble chart of lamb exports" from_port="output" to_port="result 4"/>
+      <connect from_op="Retrieve Bar chart of lamb exports" from_port="output" to_port="result 3"/>
+      <connect from_op="Retrieve Funnel chart of pork exports" from_port="output" to_port="result 9"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="source_input 2" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+      <portSpacing port="sink_result 5" spacing="0"/>
+      <portSpacing port="sink_result 6" spacing="0"/>
+      <portSpacing port="sink_result 7" spacing="0"/>
+      <portSpacing port="sink_result 8" spacing="0"/>
+      <portSpacing port="sink_result 9" spacing="0"/>
+      <portSpacing port="sink_result 10" spacing="0"/>
+    </process>
+  </operator>
+</process>
